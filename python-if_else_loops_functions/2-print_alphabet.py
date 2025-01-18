@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-for al in "abcdefghijklmnopqrstuvwxyz":
-    print("{}".format(al), end="")
+for letter in range(ord('a'), ord('z')+1):
+    print("{}".format(chr(letter)), end="")
