@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-for al in "abcdefghijklmnopqrstuvwxyz":
-    print("{}".format(al), end="")
-print()
+
+for i in range(97, 123):
+    print(chr(i), end="")
