@@ -12,4 +12,4 @@ def roman_to_int(roman_string):
         else:
             total += value
         y = value
-    return total*
+    return total
