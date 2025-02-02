@@ -60,7 +60,7 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """Returns a string representation of the rectangle using '#' characters."""
+        """Returns a string of a rectangle using '#' characters."""
         if self.__width == 0 or self.__height == 0:
             return ""
         return "\n".join([
@@ -68,10 +68,10 @@ class Rectangle:
         ])
 
     def __repr__(self):
-        """Returns a string representation of the rectangle for reproduction."""
+        """Returns a string of a rectangle"""
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
-        """Prints a message when a Rectangle instance is deleted and updates count."""
+        """Returns a string of a rectangle"""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
