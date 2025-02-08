@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 """Module 8-rectangle.
-
 This module defines a Rectangle class that inherits from BaseGeometry.
-It represents a rectangle with width and height attributes validated as
-positive integers.
 """
 
 
