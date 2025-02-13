@@ -2,7 +2,8 @@
 """write file"""
 
 
-def write_file(filename="", text=""):
-    """write file"""
-    with open(filename, 'w') as f:
-        return f.write(text)
+def read_file(filename=""):
+    """Reads a text file (UTF-8) and prints its content to stdout."""
+    with open(filename, "r", encoding="utf-8") as f:
+        print(f.read(), end="")
+
