@@ -1,6 +1,6 @@
--- This script creates the table force_name with specified columns
+-- Script to create the table force_name with constraints
 
 CREATE TABLE IF NOT EXISTS force_name (
-    id INT
+    id INT,
     name VARCHAR(256) NOT NULL
 );
