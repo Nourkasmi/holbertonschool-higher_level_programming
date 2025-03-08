@@ -1,5 +1,4 @@
 -- Script to create the database hbtn_0d_2 and user user_0d_2
--- Ensures the script does not fail if the database or user already exists
 
 CREATE DATABASE IF NOT EXISTS hbtn_0d_2;
 
