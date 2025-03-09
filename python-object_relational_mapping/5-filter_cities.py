@@ -10,6 +10,7 @@ import sys
 if __name__ == "__main__":
     """
     Retrieves all cities of a given state safely from SQL injection.
+    Results are sorted in ascending order by city ID.
     """
 
     username = sys.argv[1]
@@ -34,9 +35,9 @@ if __name__ == "__main__":
     """
 
     cur.execute(query, (state_name,))
-    cities = [row[0] for row in cur.fetchall()]
+    cities = cur.fetchall()
 
-    print(", ".join(cities))
+    print(", ".join(city[0] for city in cities))
 
     cur.close()
     db.close()
