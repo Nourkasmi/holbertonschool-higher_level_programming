@@ -1,17 +1,12 @@
 #!/usr/bin/python3
 """
-Lists all cities of a given state from the database hbtn_0e_4_usa.
+Lists all cities of a given state from the database hbtn_0e_4_usa safely.
 """
 
 import MySQLdb
 import sys
 
-
 if __name__ == "__main__":
-    """
-    Retrieves all cities of a given state safely from SQL injection.
-    """
-
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
@@ -32,13 +27,12 @@ if __name__ == "__main__":
         WHERE states.name = %s
         ORDER BY cities.id ASC
     """
-
     cur.execute(query, (state_name,))
     cities = cur.fetchall()
 
     city_names = [city[0] for city in cities]
-
-    print(", ".join(city_names))
+    if city_names:
+        print(", ".join(city_names))
 
     cur.close()
     db.close()
