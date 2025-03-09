@@ -10,8 +10,7 @@ import sys
 if __name__ == "__main__":
     """
     Connects to the MySQL database and retrieves all states
-    where name matches the provided argument.
-    Results are sorted in ascending order by id.
+    where name matches 
     """
 
     username = sys.argv[1]
