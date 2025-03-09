@@ -7,8 +7,13 @@ where name matches the argument.
 import MySQLdb
 import sys
 
-
 if __name__ == "__main__":
+    """
+    Connects to the MySQL database and retrieves all states
+    where name matches the provided argument.
+    Results are sorted in ascending order by id.
+    """
+
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
@@ -25,10 +30,10 @@ if __name__ == "__main__":
     cur = db.cursor()
     query = (
         "SELECT * FROM states "
-        "WHERE name LIKE BINARY '{}' "
-        "ORDER BY id ASC".format(state_name)
+        "WHERE name LIKE BINARY %s "
+        "ORDER BY id ASC"
     )
-    cur.execute(query)
+    cur.execute(query, (state_name,))
 
     for row in cur.fetchall():
         print(row)
