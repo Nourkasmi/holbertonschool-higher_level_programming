@@ -9,8 +9,7 @@ import sys
 
 if __name__ == "__main__":
     """
-    Retrieves all cities along with their corresponding state names.
-    Results are sorted in ascending order by city ID.
+    Retrieves all cities along with their corresponding state.
     """
 
     username = sys.argv[1]
