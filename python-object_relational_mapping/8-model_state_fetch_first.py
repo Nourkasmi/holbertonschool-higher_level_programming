@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Prints the first State object from the database hbtn_0e_6_usa.
+Prints the first State object from the database `hbtn_0e_6_usa`.
 """
 
 import sys
@@ -10,10 +10,6 @@ from model_state import Base, State
 
 
 if __name__ == "__main__":
-    """
-    Connects to MySQL using SQLAlchemy and retrieves the first State object.
-    """
-
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
