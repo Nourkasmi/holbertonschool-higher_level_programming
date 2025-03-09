@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Prints the id of a State object with the name passed as argument
-from the database `hbtn_0e_6_usa`.
+Adds the State object "Louisiana" to the database `hbtn_0e_6_usa`.
 """
 
 import sys
@@ -14,7 +13,6 @@ if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
-    state_name = sys.argv[4]
 
     engine = create_engine(
         "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
@@ -26,11 +24,10 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).filter(State.name == state_name).first()
+    new_state = State(name="Louisiana")
+    session.add(new_state)
+    session.commit()
 
-    if state is not None:
-        print("{}".format(state.id))
-    else:
-        print("Not found")
+    print("{}".format(new_state.id))
 
     session.close()
