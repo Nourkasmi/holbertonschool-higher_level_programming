@@ -9,6 +9,10 @@ import sys
 
 
 if __name__ == "__main__":
+    """
+    Connects to MySQL and retrieves states where name matches user input.
+    """
+
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
