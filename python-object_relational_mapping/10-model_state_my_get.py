@@ -28,8 +28,8 @@ if __name__ == "__main__":
 
     state = session.query(State).filter(State.name == state_name).first()
 
-    if state:
-        print(state.id)
+    if state is not None:
+        print("{}".format(state.id))
     else:
         print("Not found")
 
