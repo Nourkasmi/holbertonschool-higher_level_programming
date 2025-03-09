@@ -7,9 +7,6 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    """
-    Retrieves all cities of a given state safely from SQL injection.
-    """
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
@@ -39,3 +36,4 @@ if __name__ == "__main__":
 
     cur.close()
     db.close()
+    
