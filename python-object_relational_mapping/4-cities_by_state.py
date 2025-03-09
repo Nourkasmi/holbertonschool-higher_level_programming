@@ -9,7 +9,7 @@ import sys
 
 if __name__ == "__main__":
     """
-    Connects to MySQL and retrieves all cities with their corresponding states.
+    Connects to MySQL and retrieves all cities with and states.
     """
 
     username = sys.argv[1]
