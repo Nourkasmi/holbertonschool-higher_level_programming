@@ -9,7 +9,8 @@ import sys
 
 if __name__ == "__main__":
     """
-    Connects to MySQL and retrieves all cities with and states.
+    Retrieves all cities along with their corresponding state names.
+    Results are sorted in ascending order by city ID.
     """
 
     username = sys.argv[1]
@@ -25,7 +26,6 @@ if __name__ == "__main__":
     )
 
     cur = db.cursor()
-
     query = """
         SELECT cities.id, cities.name, states.name
         FROM cities
