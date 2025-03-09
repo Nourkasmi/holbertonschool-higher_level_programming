@@ -10,7 +10,6 @@ import sys
 
 if __name__ == "__main__":
     """
-    Connects to MySQL and retrieves states where name matches user input.
     Uses parameterized queries to prevent SQL injection.
     """
 
