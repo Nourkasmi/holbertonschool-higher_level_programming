@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Items List – My Flask App</title>
+</head>
+<body>
+  {% include 'header.html' %}
+
+  <main>
+    <h2>Items List</h2>
+
+    {% if items %}
+      <ul>
+        {# Loop over each item passed from Flask #}
+        {% for item in items %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p><em>No items found.</em></p>
+    {% endif %}
+  </main>
+
+  {% include 'footer.html' %}
+</body>
+</html>
