@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Product Display – My Flask App</title>
+</head>
+<body>
+  {% include 'header.html' %}
+
+  <main>
+    <h2>Products</h2>
+
+    {# Show an error if one was passed #}
+    {% if error %}
+      <p style="color:red;"><strong>{{ error }}</strong></p>
+    {% else %}
+      {# If no error but list is empty #}
+      {% if products %}
+        <table border="1" cellpadding="5" cellspacing="0">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for p in products %}
+            <tr>
+              <td>{{ p.id }}</td>
+              <td>{{ p.name }}</td>
+              <td>{{ p.category }}</td>
+              <td>${{ "%.2f"|format(p.price) }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% else %}
+        <p><em>No products to display.</em></p>
+      {% endif %}
+    {% endif %}
+  </main>
+
+  {% include 'footer.html' %}
+</body>
+</html>
